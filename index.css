@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    background-color: rgb(255, 231, 231);
+}
+#wrap{
+    margin:0 auto;
+    margin:0;
+}
+#index{
+    height: 842px;
+    width: 1665px;
+    margin:0;
+    display: table;
+}
+#index_ul li{
+    list-style: none;
+    font-size: 50px;
+    font-family: 'Lora', serif;
+    color:rgb(182, 182, 182);
+}
+#index_ul{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#index_ul li:hover{
+    color:rgb(255, 125, 125);
+    font-weight: bold;
+}
+#sub_work{
+    display: none;
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+#sub_work li{
+    font-size: 20px;
+    margin-right: 30px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+#sub_work #genie:hover{
+    color: rgb(17, 168, 255);
+    font-weight: bold;
+}
+#sub_work #baemin:hover{
+    color: rgb(32, 204, 195);
+    font-weight: bold;
+}
+#work:hover > ul{
+    display: block;
+}
