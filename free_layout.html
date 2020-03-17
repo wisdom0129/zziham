@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>free_layout</title>
+        <meta charset="utf-8"/>
+        <style>
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left{ float: left; }
+            .float_right{ float: right; }
+            .clear { clear:both; height:0; overgflow:hidden; }
+
+            input:-ms-input-placeholder {color:#21b5e6}
+            input::-webkit-input-placeholder {color:#21b5e6}
+            input::-moz-input-placeholder {color:#21b5e6}
+
+            #header0{
+            position: fixed;
+            background-color: #ffffff;
+            left: 0px;
+            right: 0;
+            bottom: 690px;
+            height: 7.5rem ;
+            top: 0px;
+            }
+
+            .header li{
+                float: left;
+                list-style : none;
+                font-size: 13px;
+                margin:5px 15px 20px 0px;
+                border-left: solid 2px #d7d7d7 ;
+                padding-left: 12px;
+            }
+            .header li a{
+                text-decoration: none;
+                color: gray;
+            }
+            .header :hover{
+            color: #21b5e6;
+            }
+            .header{
+                margin: 0px 0px 0px 0px;
+                padding: 0px;
+            }
+            header>ul>li:nth-child(1){
+                font-weight:bold;
+                font-size:14px;
+                color:#21b5e6;
+                border-left:none;
+            }
+            #wrap{
+                margin:0px 0px 0px 225px;
+            }
+            #header0>h1{
+                margin: 0px;
+                padding: 0px 20px 0px 55px;                 
+            }
+            .long_line{
+                border-bottom:solid 1px #d7d7d7;
+                width:100%;
+                margin:20px 0px 0px 0px; /*상하 좌우*/
+            }
+            .long_line2{
+                border-bottom:solid 1px #d7d7d7;
+                height:100%;
+                margin:25px 0px 0px 0px; /*상하 좌우*/
+            }
+            .short_line{
+                border-bottom:solid 1px #d7d7d7;
+                width:205px;
+                margin: 10px 10px; /*상하 좌우*/
+            }
+            .search{
+                height: 40px;
+                width: 400px;
+                border: 1px solid #21b5e6;
+                background:#ffffff;
+                display: inline-block;
+                margin: 10px 0px 0px 60px;
+            }
+            .login{
+                float:right;
+                color:grey;
+                font-size: 13px;
+                margin: 25px 30px 0px 0px;
+            }
+            input{
+                border: 0px;
+                font-size: 16px;
+                padding: 10px;
+                width: 340px;
+                outline: none;
+                float: left;
+            }
+            .search img{
+                margin: 3px 0px 0px 0px;
+            }
+            body .nav li{
+                list-style : none; 
+                font-size: 16px;
+                padding:0px 0px 20px 20px;
+            }
+            body .nav {
+                margin:25px 0px 0px 40px;
+            }
+            .nav :hover{
+            color: #21b5e6;
+            }
+            .newalbum{
+                float: left;
+                margin: 110px 0px 0px 40px;
+            }
+            .newalbum_img li{
+                float: left;
+                margin: 5px 30px 22px 0px;
+            }
+            .newalbum>ul>li{
+                list-style : none;
+            }
+            .newalbum>div>ul>li{
+                list-style : none;
+            }
+            .newalbum_text{
+                font-size: 22px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin: 45px 15px 15px 0px;
+                float:left;
+            }
+            .newalbum_text2{
+                font-size: 15px;
+                color:#9f9f9f;
+                float:left;
+                padding: 0px 10px 0px 0px;
+                margin: 50px 0px 0px 0px;
+            }
+            #footer{
+            position: fixed;
+            background-color: #21b5e6;
+            left: 225px;
+            right: 0;
+            bottom: 0;
+            height: 6rem;
+            }
+            .footer_img1{
+            margin: 15px 0px 0px 30px;
+            float:left;
+            }
+            .footer2{
+                float:left;
+                margin :27px 0px 0px 10px;
+                list-style : none;
+                padding: 0px;
+            }
+            .footer2 li:nth-child(1){
+                font-weight:bold;
+                color:white;
+                margin: 0px 0px 3px 0px;
+            }
+            .footer2 li:nth-child(3){
+                font-size: 12px;
+                color:rgba(255, 255, 255, 0.79);
+                margin:7px 0px 0px 0px;
+            }
+            .control_eara{
+                margin: 35px 40px 0px 0px;
+                float: right;
+            }
+            .control_eara>ul>li{
+                padding: 0px 0px 0px 30px;
+                float:left;
+                list-style : none;
+            }
+            .play_line{
+                height: 3px;
+                background-color: white;
+                width:400px;
+            }
+            .footer3 li{
+                float: left;
+                list-style : none;
+                margin:43px 0px 0px 10px;
+                font-size:13px;
+                color:white;
+            }
+            .local{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                top: 121px;
+                z-index: 60;
+                width: 225px;
+                border-right: solid 1px #d7d7d7;
+                background-color: rgb(245, 244, 244);
+            }
+
+            ul{
+                margin:0px;
+                padding:0px;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 0px;
+                display: inline;
+            }
+            .local2{
+                margin: 0px 0px 0px 15px;
+            }
+            .local1{
+                margin: 20px 10px 10px 55px;
+                float:left;
+            }
+            .local0{
+                float:left;
+                margin: 28px 0px 0px 5px;
+            }
+            html{
+                max-width: 1700px;
+            }
+            .icon{
+                margin:0px 10px 0px 5px;
+            }
+            .my{
+                margin:0px 10px 0px 25px;
+                float:left;
+            }
+            .my2{
+                float:left;
+                margin:2px 0px 0px 0px;
+            }
+            .short_line2{
+                border-bottom:solid 1px #d7d7d7;
+                width:150px;
+                margin: 10px 50px; /*상하 좌우*/
+            }
+            .short_line3{
+                border-bottom:solid 1px #d7d7d7;
+                width:600px;
+                margin: 7px 0px; /*상하 좌우*/
+            }
+            .icon8{
+                margin: 0px 0px 0px 70px;
+            }
+            .my_music ul li{
+                margin: 0px 0px 0px 55px;
+                padding: 3px 0px 7px 0px;
+                list-style : none;
+                color:gray;
+                font-size:15px;
+            }
+            .my_music :hover{
+            color: #21b5e6;
+            }
+            
+            .my_music{
+                margin: 20px 0px 0px 0px;
+            }
+            .my_music2 ul li{
+                margin: 0px 0px 0px 55px;
+                padding: 3px 0px 7px 0px;
+                list-style : none;
+                color:gray;
+                font-size:15px;
+            }
+            .my_music2 :hover{
+            color: #21b5e6;
+            }
+            
+            .my_music2{
+                margin: 30px 0px 0px 0px;
+            }
+            #footer .lyric{
+                list-style: none;
+                margin:32px 0px 0px 200px;
+                float:left;
+                text-align: center
+            }
+            #footer .lyric li{
+                color: white;
+            }
+
+            body{
+                display: inline;
+            }
+            .chart1 li{
+                float: left;
+                padding: 0px 25px 0px 0px;
+            }
+
+            .whitebox{
+                margin:100px 0px 0px 0px;
+                background-color:rgb(245, 245, 245);
+                color:gray;
+                width: 1380px;
+                height:180px;
+                margin: 0px;
+                text-align: center;
+                padding:100px 0px 0px 0px;
+            }
+            .album13{
+                font-weight: bold;
+            }
+            .chart1 li:nth-child(1){
+                font-size:25px;
+                margin:12px 0px 0px 0px;
+                font-style: italic;
+                font-weight: bold;
+            }
+            .musictitle1{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 268px 0px 0px;
+            }
+            .musictitle2{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 146px 0px 0px;
+            }
+            .musictitle3{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 310px 0px 0px;
+            }
+            .musictitle4{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 207px 0px 0px;
+            }
+            .musictitle5{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 227px 0px 0px;
+            }
+            .musictitle6{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 244px 0px 0px;
+            }
+            .musictitle7{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 254px 0px 0px;
+            }
+            .musictitle8{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 298px 0px 0px;
+            }
+            .musictitle9{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 226px 0px 0px;
+            }
+            .musictitle10{
+                margin:10px 0px 0px 0px;
+                font-size: 14px;
+                margin:10px 104px 0px 0px;
+            }
+            .chart1 li:nth-child(4){
+                margin:10px 0px 0px 0px;
+            }
+            .chart1 li:nth-child(5){
+                margin:10px 0px 0px 0px;
+            }
+            .chart3 ul li{
+                list-style: none;
+            }
+            .chart3{
+                float: right;
+                margin: 0px 60px 0px 0px;
+            }
+            .chart4 ul li{
+                list-style: none;
+            }
+            .chart4{
+                float: left;
+            }
+            .whatmusic_text{
+                font-size: 22px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin: 65px 15px 15px 0px;
+                float:left;
+            }
+            .whatmusic_text2{
+                font-size: 15px;
+                color:#9f9f9f;
+                float:left;
+                padding: 0px 10px 0px 0px;
+                margin: 70px 0px 0px 0px;
+            }
+            .whatmusic_cate ul li{
+                list-style: none;
+                float:left;
+                padding: 0px 35px 0px 35px;
+                margin: 12px 0px 0px 0px;
+                border-right: solid 1px  #21b5e6;
+            }
+            .whatmusic_cate ul li:nth-child(1){
+                margin:12px 0px 0px 200px;
+            }
+            .whatmusic_cate ul li:nth-child(9){
+                border-right: none;
+            }
+            .whatmusic_cate{
+                background-color: rgb(255, 255, 255);
+                margin:0pc 40px 0px 0px;
+                height: 40px;
+                font-size: 13px;
+            }
+            .long_line2{
+                border-bottom:solid 1.5px#21b5e6;
+                width:1375px;
+                margin: 5px 0px; /*상하 좌우*/
+            }
+            .whatmusic_cate>ul>li:hover{
+            color: #21b5e6;
+            }
+            .whatmusic_cate li:nth-child(1){
+                font-weight: bold;
+            }
+            .whatmusic_cate2 li {
+                float: left;
+                padding: 10px 20px;
+                font-size: 12px;
+                color:gray;
+            }
+            .whatmusic_cate2 li:nth-child(1){
+                margin: 0px 0px 0px 270px;
+            }
+            .whatmusic_cate2 li:nth-child(2){
+                font-weight: bold;
+            }
+            .whatmusic_cate2 ul li:hover{
+                font-weight: bold;
+            }
+            .whatmusic_cate2 :hover{
+                font-weight: bold;
+            }
+            .whatmusic_album{
+                font-size: 20px;
+                margin: 15px 86px 10px 30px;
+                color:gray;
+                font-weight:500;
+            }
+            .whatmusic_album2 ul li{
+                float:left;
+                padding:0px 20px 0px 0px;
+                }
+            .whatmusic_album2{
+                margin:0px 0px 0px 30px;
+            }
+            li{
+                display:inline-block;
+                text-align: auto;
+            }
+            .nav li{
+                display:list-item;
+            }
+            .my_music2 ul li{
+                display:list-item;
+            }
+            #footer li {
+                display: list-item;
+            }
+            #festival1 img:last-child{display:none}
+            #festival1:hover img:first-child{display:none}
+            #festival1:hover img:last-child{display:inline-block}
+
+            .baladtitle{
+                float:left;
+                margin:0px 0px 0px 35px;
+
+            }
+            .baladtitle dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .baladtitle dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;  
+            }
+            .baladtitle2{
+                float:left;
+                margin:0px 0px 0px 182px;
+            }
+            .baladtitle2 dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;
+            }
+            .baladtitle2 dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .baladtitle3{
+                float:left;
+                margin:0px 0px 0px 135px;
+            }
+            .baladtitle3 dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;
+            }
+            .baladtitle3 dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .baladtitle4{
+                float:left;
+                margin:0px 0px 0px 135px;
+            }
+            .baladtitle4 dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;
+            }
+            .baladtitle4 dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .baladtitle5{
+                float:left;
+                margin:0px 0px 0px 170px;
+            }
+            .baladtitle5 dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;
+            }
+            .baladtitle5 dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .baladtitle6{
+                float:left;
+                margin:0px 0px 0px 180px;
+            }
+            .baladtitle6 dd{
+                margin:10px 0px 0px 0px;
+                color:rgb(162, 162, 162);
+                font-size: 13px;
+            }
+            .baladtitle6 dt{
+                font-size: 15px;
+                font-weight: bold;
+            }
+             /*---------------------------------------------------------------------------------------------------------------*/
+
+            .TV ul li{
+                float: left;
+            }
+            .TV ul li:nth-child(1){
+                font-size: 22px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin: 40px 15px 15px 0px;
+                float:left;
+            }
+            .TV ul li:nth-child(2){
+                font-size: 15px;
+                color:#9f9f9f;
+                float:left;
+                padding: 0px 10px 0px 0px;
+                margin: 45px 0px 0px 0px;
+            }
+        
+            #content li{
+                list-style : none; /* 리스트모양(동그라미) : 없음 */
+                float: left;
+            }
+            .card{
+                background-color:white;
+                border-top: solid 1px rgb(193, 193, 193);
+                border-right: solid 1px rgb(193, 193, 193);
+                border-bottom: solid 1px rgb(193, 193, 193);
+                border-left: solid 1px rgb(193, 193, 193);
+                width: 310px;
+                height: 230px;
+            }
+            .TVvideo{
+                margin:110px 0px 0px 50px;
+                width: 314px;
+                display: list-item;
+            }
+            .TVvideo2{
+                margin:110px 0px 0px 15px;
+                width: 314px;
+                display: block;
+                float: left;
+            }
+            .info dl dt{
+                font-size: 12px;
+                margin: 0px 0px 5px 10px;
+                color: gray;
+            }
+            .info dl dd{
+                font-size:15px;
+                margin: 0px 0px 0px 10px;
+            }
+            .TVvideoreal li{
+                float: left;
+            }
+            .hip{
+                font-weight: bold;
+            }
+            .mamamoo{
+                color:rgb(53, 53, 53);
+                font-size: 14px;
+            }
+             /*---------------------------------------------------------------------------------------------------------------*/
+            .good{
+                font-size: 22px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin: 60px 15px 15px 0px;
+                float:left;
+            }
+            .good2{
+                font-size: 15px;
+                color:#9f9f9f;
+                float:left;
+                padding: 0px 10px 0px 0px;
+                margin: 65px 0px 0px 0px;
+            }
+            #goodjob{
+                margin: 0px 0px 0px 5px;
+            }
+            #goodjob li{
+                padding: 0px 0px 0px 20px;
+            }
+            .goodjob2 dl dd{
+                margin:0px;
+            }
+            .goodjob3 dl dd{
+                margin:0px;
+            }
+            .goodjob2{
+                margin:0px 0px 0px 30px;
+                width: 200px;
+                float: left;
+            }
+            .goodjob3{
+                margin:0px 0px 0px 23px;
+                width: 200px;
+                float: left;
+                height: 150px;
+            }
+            .goodjob2 dl dd:nth-child(1){
+                font-size: 12px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin:5px 0px;
+            }
+            .goodjob2 dl dt{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .goodjob2 dl dd:nth-child(3){
+                font-size: 13px;
+                color:#8e8e8e;
+                margin:5px 0px;
+            }
+            .goodjob2 dl dd:nth-child(4){
+                font-size: 13px;
+                color:#8e8e8e;
+            }
+            .goodjob3 dl dd:nth-child(1){
+                font-size: 12px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin:5px 0px;
+            }
+            .goodjob3 dl dt{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .goodjob3 dl dd:nth-child(3){
+                font-size: 13px;
+                color:#8e8e8e;
+                margin:5px 0px;
+            }
+            .goodjob3 dl dd:nth-child(4){
+                font-size: 13px;
+                color:#8e8e8e;
+            }
+            .goodjob4{
+                margin:0px 0px 0px 0px;
+                width: 200px;
+                float: left;
+            }
+            .goodjob4 dl dd:nth-child(1){
+                font-size: 12px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin:5px 0px;
+            }
+            .goodjob4 dl dt{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .goodjob4 dl dd:nth-child(3){
+                font-size: 13px;
+                color:#8e8e8e;
+                margin:5px 0px;
+            }
+            .goodjob4 dl dd:nth-child(4){
+                font-size: 13px;
+                color:#8e8e8e;
+            }
+            .keyword{
+                text-align: center;
+                color:#009de6;
+                font-size: 18px;
+                font-weight: bold;
+                margin:30px 0px 0px 0px;
+            }
+            .keyword2{
+                text-align: center;
+                margin: 10px 0px 0px 0px;
+            }
+            .keyword2 li{
+                padding:10px 10px 0px 0px;
+            }
+            .keyword3{
+                text-align: center;
+                color:#009de6;
+                font-size: 18px;
+                font-weight: bold;
+                margin:50px 0px 0px 0px;
+            }
+            .long_line3{
+            border-bottom:solid 1px #d7d7d7;
+                width:60%;
+                margin:50px 0px 0px 280px; /*상하 좌우*/
+            }
+/*---------------------------------------------------------------------------------------------------------------*/
+                .mymusic ul li:nth-child(1){
+                font-size: 22px;
+                font-weight: bold;
+                color:#21b5e6;
+                margin: 71px 15px 15px 0px;
+                float:left;
+                }
+
+                .mymusic ul li:nth-child(2){
+                font-size: 15px;
+                color:#9f9f9f;
+                float:left;
+                padding: 0px 10px 0px 0px;
+                margin: 75px 0px 0px 0px;
+                }
+                
+                .mymusic2{
+                    color:rgb(147, 147, 147);
+                    padding:0px 0px 5px 0px;
+                    width:450px;
+                    margin:0px 10px 0px 490px;
+                }
+                .mymusic2 ul li:nth-child(1){
+                    font-weight: bold;
+                }
+                .mymusic2 ul li{
+                    border-right: gray;
+                    padding:10px 10px 0px 15px;
+                }
+                .crush{
+                    float:left;
+                    margin:60px 0px 0px 20px;
+                }
+                .crush2{
+                    float:left;
+                    margin:100px 0px 0px 50px;
+                }
+                .realfooter{
+                    background-attachment: color;
+                    top:0;
+                    height: 300px;
+                }
+                a { text-decoration:none }
+
+                .geniechart ul a{
+                    color:rgb(147, 147, 147);
+                }
+                .geniechart ul a:hover{
+                    color:#21b5e6;
+                }
+                .login a{
+                    color:rgb(147, 147, 147);
+                }
+                .login a:hover{
+                    color:#21b5e6;
+                }
+                .text3 ul li:nth-child(2):hover{
+                    color:#21b5e6;
+                }
+                .text3 ul li:nth-child(3):hover{
+                    color:#21b5e6;
+                }
+                .text3 ul li:nth-child(4):hover{
+                    color:#21b5e6;
+                }
+
+                .newalbum_text a{
+                    color:#21b5e6;
+                }
+                .musictitle1 a{
+                    color: black;
+                }
+                .whatmusic_text2 a{
+                    color:rgb(147, 147, 147);
+                }
+                .whatmusic_text2 a:hover{
+                    color:#21b5e6;
+                }
+                .TV ul li a{
+                    color:rgb(147, 147, 147); 
+                }
+                .TV ul li a:hover{
+                    color:#21b5e6;
+                }
+                .good2 a{
+                    color:rgb(147, 147, 147); 
+                }
+                .good2 a:hover{
+                    color:#21b5e6;
+                }
+                .keyword4 li a{
+                    color:rgb(147, 147, 147); 
+                }
+                .keyword4 li a:hover{
+                    color:#21b5e6;
+                }
+                .mymusic li a{
+                    color: rgb(147, 147, 147); 
+                }
+                .mymusic li a:hover{
+                    color:#21b5e6;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div class="local">
+            <img class="local1"src="images/local1.png"width="30px">
+            <div class="local0">정지혜<img class="local2"src="images/local2.png"width="10px"></div>
+            <div class="clear"></div>
+            <div class="short_line">
+        </div>
+
+        <ul class="nav">
+            <li><img class="icon" src="images/newmusic.png" widh="15px" height="17px">최신음악</li>
+            <li><img class="icon" src="images/icon2.png" widh="17px" height="19px">지니차트</li>
+            <li><img class="icon" src="images/icon5.png" widh="15px" height="19px">장르음악</li>
+            <li><img class="icon" src="images/icon3.png" widh="15px" height="19px">지니TV</li>
+            <li><img class="icon" src="images/icon6.png" widh="15px" height="19px">추천</li>
+            <li><img class="icon" src="images/icon4.png" widh="15px" height="19px">키워드</li>
+        </ul>
+
+        <div class="my_music">
+            <img class="my"src="images/icon7.png" width="20px">
+            <div class="my2">마이뮤직<img class="icon8"src="images/icon8.png"width="10px"></div>
+            <div class="clear"></div>
+            <div class="short_line2"></div>
+            <ul class="my_music5">
+                <li>최근 들은 곡</li>
+                <li>가장 많이 들은 곡</li>
+                <li>구매한 음악</li>
+                <li>좋아한 음악</li>
+            </ul>
+        </div>
+
+        <div class="my_music2">
+            <img class="my"src="images/icon9.png" width="20px">
+            <div class="my2">보관함<img class="icon8"src="images/icon8.png"width="10px"></div>
+            <div class="clear"></div>
+            <div class="short_line2"></div>
+            <ul>
+                <li>노래</li>
+                <li>아티스트</li>
+                <li>플레이리스트</li>
+                <li>+ 새로만들기</li>
+            </ul>
+            </div>
+        </div>
+    <div id="header0">
+        
+        <header>
+            <ul class="header">
+                <li><a href="index.html"target="_blank">LAST REPORT</a></li>
+                <li><a href="layout1.html"target="_blank">Layout1</a></li>
+                <li><a href="layout2.html"target="_blank">Layout2</a></li>
+                <li><a href="layout3.html"target="_blank">Layout3</a></li>
+                <li><a href="free_layout.html"target="_blank">Genie</a></li>
+                <div class="clear"></div>
+            </ul>
+        </header>
+
+        <h1 class= "float_left">
+                <a href="https://www.genie.co.kr/"target="_blank"><img src="images/genie_logo.png" width="130px"/></a>
+        </h1>
+
+        <div class="search">
+            <input type ="text" placeholder="당신의 하루를 빛나게 해줄 지니뮤직!">
+            <botton><a href="https://www.genie.co.kr/"target="_blank"><img src="images/plus.png" width="25px"/></a></botton>
+            <div class="clear"></div>
+        </div>
+
+        <span class="login"><a href="https://www.genie.co.kr/member/signUp"target="_blank">로그인/회원가입</a></span>
+        <div class="long_line"></div>
+        <div class="clear"></div>
+    </div>
+
+        <div id="wrap">
+            <div class="newalbum">
+                <div class="text3">
+                    <ul>
+                    <li class="newalbum_text"><a href="https://www.genie.co.kr/chart/top200"target="_blank">최신음악</a></li>
+                    <li class="newalbum_text2">종합</li>
+                    <li class="newalbum_text2">국내</li>
+                    <li class="newalbum_text2">국외</li>
+                    <div class="clear"></div>
+                    </ul>
+                </div>
+                <ul class="newalbum_img">
+                    <li id="festival1">
+                        <img src="images/album1.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album1-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album2.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album2-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album3.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album3-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album4.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album4-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album5.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album5-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album6.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album6-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album7.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album7-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album8.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album8-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album9.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album9.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album10.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album10-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album11.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album11-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <li id="festival1">
+                        <img src="images/album12.jpeg" width="200px" class="albumtitle">
+                        <img src="images/album12-2.jpg" width="200px" class="albumtitle">
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="geniechart">
+                    <ul>
+                    <li class="newalbum_text">지니차트</li>
+                    <li class="newalbum_text2"><a href="https://www.genie.co.kr/chart/top200"target="_blank">자세히보기></a></li>
+                    <div class="clear"></div>
+                    </ul>
+                    </div>
+                    <div class="chart4">
+                <div> 
+                <ul class="chart1">
+                    <li>1</li>
+                    <li><img src="images/album13.jpeg" width="50px"></li>
+                    <li class="musictitle1"><a href="https://www.genie.co.kr/detail/albumInfo?axnm=81323366"target="_blank"><span class="album13">나의 오랜 연인에게</span></br>다비치</a></li>
+                    <li><img src="images/playbutton.png" width="35px"></li>
+                    <li><img src="images/plusbutton.png" width="35px"></li>
+                    <div class="clear"></div>
+                </ul>
+                </div>
+               <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>2</li>
+                        <li><img src="images/album14.jpeg" width="50px"></li>
+                        <li class="musictitle2"><span class="album13">아마두</span></br>염따 & 딥플로우 & 팔로알토 (Paloalto)...</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                     </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>3</li>
+                        <li><img src="images/album15.jpeg" width="50px"></li>
+                        <li class="musictitle3"><span class="album13">Blueming</span></br>아이유(IU)</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>4</li>
+                        <li><img src="images/album16.jpeg" width="50px"></li>
+                        <li class="musictitle4"><span class="album13">헤어진 우리가 지켜야 할 것들</span></br>김나영 & 양다일</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>5</li>
+                        <li><img src="images/album17.jpeg" width="50px"></li>
+                        <li class="musictitle5"><span class="album13">Into the Unkown</span></br>Idina Menzel & AURORA</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+            </div>
+            <div class="chart3">
+                <div>    
+                    <ul class="chart1">
+                        <li>6</li>
+                        <li><img src="images/album18.jpeg" width="50px"></li>
+                        <li class="musictitle6"><span class="album13">늦은 밤 너의 집 앞에서</span></br>노을</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>7</li>
+                        <li><img src="images/album19.jpeg" width="50px"></li>
+                        <li class="musictitle7"><span class="album13">HIP</span></br>마마무(MAMAMOO)</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>8</li>
+                        <li><img src="images/album15.jpeg" width="50px"></li>
+                        <li class="musictitle8"><span class="album13">Love Poem</span></br>아이유(IU)</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>9</li>
+                        <li><img src="images/album17.jpeg" width="50px"></li>
+                        <li class="musictitle9"><span class="album13">Show Yourself</span></br>Idina Menzel & AURORA</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+                <div class="short_line3"></div>
+                <div>    
+                    <ul class="chart1">
+                        <li>10</li>
+                        <li><img src="images/album20.jpeg" width="50px"></li>
+                        <li class="musictitle10"><span class="album13">어떻게 이별까지 사랑하겠어, 널 사랑하는 거지</span></br>AKMU(악동뮤지션)</li>
+                        <li><img src="images/playbutton.png" width="35px"></li>
+                        <li><img src="images/plusbutton.png" width="35px"></li>
+                        <div class="clear"></div>
+                        </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+   <!----------------------------------------------------------------------------------------------------------------->          
+                <div>
+                    <ul>
+                        <li class="whatmusic_text">장르음악</li>
+                        
+                        <li class="whatmusic_text2"><a href="https://www.genie.co.kr/genre/M0100"target="_blank">자세히보기 ></a></li>
+                    <div class="clear"></div>
+                    </ul>
+
+                <div class="whatmusic_cate">
+                    <ul>
+                        <li>가요</li>
+                        <li>POP</li>
+                        <li>OST</li>
+                        <li>EDM</li>
+                        <li>Jazz</li>
+                        <li>Classic</li>
+                        <li>JPOP</li>
+                        <li>CCM</li>
+                        <li>그 외 장르</li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="long_line2"></div>
+                <ul class="whatmusic_cate2">
+                    <li>전체</li>
+                    <li>발라드</li>
+                    <li>댄스</li>
+                    <li>RNB/소울</li>
+                    <li>락</li>
+                    <li>랩/힙합</li>
+                    <li>일렉트로니카</li>
+                    <li>인디</li>
+                    <li>블루스/포크</li>
+                    <li>트로트</li>
+                    <div class="clear"></div>
+                </ul>
+                
+                <div class="whatmusic_album">최신앨범</div>
+                <div class="whatmusic_album2">
+                    <ul>
+                        <li id="festival1">
+                            <img src="images/blad1.jpeg" width="200px" >
+                            <img src="images/blad1-2.jpg" width="200px" >
+                        </li>
+                        <li id="festival1">
+                            <img src="images/balad2.jpeg" width="200px" >
+                            <img src="images/balad2.jpg" width="200px" >
+                        </li>
+                        <li id="festival1">
+                            <img src="images/balad3.jpeg" width="200px" >
+                            <img src="images/balad3-2.jpg" width="200px" >
+                        </li>
+                        <li id="festival1">
+                            <img src="images/balad4.jpeg" width="200px" >
+                            <img src="images/balad4-2.jpg" width="200px" >
+                        </li>
+                        <li id="festival1">
+                            <img src="images/balad5.jpeg" width="200px" >
+                            <img src="images/balad5-2.jpeg" width="200px" >
+                        </li>
+                        <li id="festival1">
+                            <img src="images/balad6.jpeg" width="200px" >
+                            <img src="images/balad6-2.jpg" width="200px" >
+                        </li>
+                        <div class="clear"></div>
+                    </div>
+                    </ul>
+                        <div class="baladtitle">
+                            <dl>
+                                <dt>그리움</dt>
+                                <dd>이동현</dd>
+                            </dl>   
+                        </div>
+                        <div class="baladtitle2">
+                            <dl>
+                                <dt>널 잊기로 했어</dt>
+                                <dd>우은미</dd>
+                            </dl>   
+                        </div>
+                        <div class="baladtitle3">
+                            <dl>
+                                <dt>같이 걸을까요</dt>
+                                <dd>남 이야기 잡화점</dd>
+                            </dl>   
+                        </div>
+                        <div class="baladtitle4">
+                            <dl>
+                                <dt>보란듯이</dt>
+                                <dd>란</dd>
+                            </dl>   
+                        </div>
+                        <div class="baladtitle5">
+                            <dl>
+                                <dt>스케치</dt>
+                                <dd>마바</dd>
+                            </dl>   
+                        </div>
+                        <div class="baladtitle6">
+                            <dl>
+                                <dt>통보</dt>
+                                <dd>박정민</dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
+                </div> <!--장르음악 div 닫기-->
+ <!----------------------------------------------------------------------------------------------------------------->
+            <div class="TV">
+                <ul>
+                    <li>지니TV</li>
+                    <li><a href="https://www.genie.co.kr/genietv"target="_blank">자세히보기 ></a></li>
+                </ul>
+            </div>
+            <ul class="TVvideoreal">
+                <li>
+                    <div class="TVvideo">
+                        <ul>
+                            <li class="card">
+                                <img src="images/video1-2.jpg" width="310px" >
+                                    <div class="info">
+                                    <dl>
+                                        <dt>시즌노래 추천</dt>
+                                        <dd>숨겨진 세상 (Into the Unknown End Credit Ver.) (겨울왕국 2)</dd>
+                                    </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> 
+                    <div class="TVvideo2">
+                        <ul>
+                            <li class="card">
+                                <img src="images/mamamoo.jpg" width="310px" >
+                                    <div class="info">
+                                    <dl>
+                                        <dt>신곡 추천</dt>
+                                        <dd><div class="hip">HIP</div><span class="mamamoo">마마무(MAMAMOO)</span></dd>
+                                    </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="TVvideo2">
+                            <ul>
+                                <li class="card">
+                                    <img src="images/you.jpg" width="310px" >
+                                        <div class="info">
+                                        <dl>
+                                            <dt>인기 뮤직비디오 추천</dt>
+                                            <dd><div class="hip">합정역 5번 출구</div><span class="mamamoo">유재석</span></dd>
+                                        </dl>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+ <!----------------------------------------------------------------------------------------------------------------->
+                    <div>
+                        <ul>
+                        <li class="good">추천</li>
+                        <li class="good2"><a href="https://www.genie.co.kr/playlist/main"target="_blank">자세히보기 ></a></li>
+                        <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div id="goodjob">
+                        <ul>
+                            <li><img src="images/chrismas.png" width="200px"></li>
+                            <li><img src="images/cafe.png" width="200px"></li>
+                            <li><img src="images/winter.png" width="200px"></li>
+                            <li><img src="images/sea.png" width="200px"></li>
+                            <li><img src="images/MOVE.png" width="200px"></li>
+                            <li><img src="images/gym.png" width="200px"></li>
+                        </ul>
+                    </div>
+                    <div class="goodjob2">
+                        <dl>
+                            <dd>크리마스 선곡</dd>
+                            <dt>다가오는 크리스마스를 위한 멋진 선곡!</dt>
+                            <dd>#크리스마스   #캐롤   #POP</dd>
+                            <dd>30곡 ㅣ 2019 12. 05</dd>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>카페스러운 선곡</dd>
+                            <dt>마치 카페에서 커피한잔하며 듣는 선곡!</dt>
+                            <dd>#카페   #여유   #힐링</dd>
+                            <dd>50곡 ㅣ 2019 12. 03</dd>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>겨울처럼 포근한 선곡</dd>
+                            <dt>추운 겨울날 음악으로 따뜻하게 보내자! </dt>
+                            <dd>#눈   #포근함   #발라드</dd>
+                            <dd>25곡 ㅣ 2019 12. 01</dd>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>바다처럼 청량한 선곡</dd>
+                            <dt>마치 바닷가로 놀러간 청량한 기분!</dt>
+                            <dd>#청량함   #에너지   #R&B</dd>
+                            <dd>50곡 ㅣ 2019 12. 07</dd>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>새벽처럼 센치한 선곡</dd>
+                            <dt>센치한 새벽, 음악으로 외로움을 달래자!</dt>
+                            <dd>#크리스마스   #캐롤   #POP</dd>
+                            <dd>50곡 ㅣ 2019 12. 05</dd>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>운동하며 듣는 선곡</dd>
+                            <dt>기분좋게 뛰자, 기분을 업시켜주는 노래!</dt>
+                            <dd>#크리스마스   #캐롤   #POP</dd>
+                            <dd>50곡 ㅣ 2019 12. 05</dd>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+ <!----------------------------------------------------------------------------------------------------------------->
+                    <div class="TV">
+                            <ul class="keyword4">
+                                <li>키워드</li>
+                                <li><a href="https://www.genie.co.kr/playlist/tags"target="_blank">자세히보기 ></a></li>
+                                <div class="clear"></div>
+                                
+                            </ul>
+                        </div>
+                    <div class="keyword">
+                        <ul>
+                            <li>날씨/계절</li>
+                        </ul>
+                    </div>
+                    <div class="keyword2">
+                        <ul>
+                            <li id="festival1">
+                                <img src="images/cate1-2.png" width="70px">
+                                <img src="images/cate1.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate2.png" width="70px">
+                                <img src="images/cate2-2.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate3-2.png" width="70px">
+                                <img src="images/cate3.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate4.png" width="70px">
+                                <img src="images/cate4-2.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate5.png" width="70px">
+                                <img src="images/cate5-2.png" width="70px">
+                            </li>
+                        </ul>
+                    </br>
+                        <ul>
+                            <li id="festival1">
+                                <img src="images/cate6-2.png" width="70px">
+                                <img src="images/cate6.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate7-2.png" width="70px">
+                                <img src="images/cate7.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate8.png" width="70px">
+                                <img src="images/cate8-2.png" width="70px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate9-2.png" width="109px">
+                                <img src="images/cate9.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate10-2.png" width="109px">
+                                <img src="images/cate10.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate11-2.png" width="109px">
+                                <img src="images/cate11.png" width="109px">
+                            </li>
+                        </ul>
+                        <div class="long_line3"></div>
+                     <div class="keyword3">
+                        <ul>
+                            <li>서비스</li>
+                        </ul>
+                    </div>
+                    <div class="keyword2">
+                        <ul>
+                            <li id="festival1">
+                                <img src="images/cate12-2.png" width="109px">
+                                <img src="images/cate12.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate13.png" width="109px">
+                                <img src="images/cate13-2.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate14.png" width="109px">
+                                <img src="images/cate14-2.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate15.png" width="109px">
+                                <img src="images/cate15-2.png" width="109px">
+                            </li>
+                            <li id="festival1">
+                                <img src="images/cate16-2.png" width="109px">
+                                <img src="images/cate16.png" width="109px">
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+ <!----------------------------------------------------------------------------------------------------------------->
+                    <div class="mymusic">
+                            <ul>
+                                <li>마이뮤직</li>
+                                <li><a href="https://www.genie.co.kr/member/popLogin?page_rfr=https%3A//www.genie.co.kr/playlist/tags"target="_blank">자세히보기 ></a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    <div class="mymusic2">
+                        <ul>
+                            <li>최근 들은 곡</li>
+                            <li>가장 많이 들은 곡</li>
+                            <li>구매한 음악</li>
+                            <li>좋아한 음악</li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="crush"><img src="images/album21.jpg" width="200px"></div>
+                    <div class="crush"><img src="images/album15.jpeg" width="200px"></div>
+                    <div class="crush"><img src="images/album13.jpeg" width="200px"></div>
+                    <div class="crush"><img src="images/album22.jpg" width="200px"></div>
+                    <div class="crush"><img src="images/album17.jpeg" width="200px"></div>
+                    <div class="crush"><img src="images/album8.jpeg" width="200px"></div>
+                    <div class="clear"></div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>크러쉬</dd>
+                            <dt>With You</dt>
+                        </dl>
+                    </div>
+
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>아이유(IU)</dd>
+                            <dt>Love Poem</dt>
+                        </dl>
+                    </div>
+
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>다비치</dd>
+                            <dt>나의 오랜 연인에게</dt>
+                        </dl>
+                    </div>
+
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>정승환</dd>
+                            <dt>십이월 이십오일의 고백</dt>
+                        </dl>
+                    </div>
+
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>Idina Menzel & AURORA</dd>
+                            <dt>Into the Unkown</dt>
+                        </dl>
+                    </div>
+                    <div class="goodjob3">
+                        <dl>
+                            <dd>강다니엘</dd>
+                            <dt>TOUCHUN'</dt>
+                        </dl>
+                    </div>
+                    <div class="clear"></div>
+                <div class="whitebox">
+                        Copyright (c) 2019 Kaywon University of Art & Design. All Rights Reserved. 
+                        <div>Copyright (c) Jeong Jihye. All Rights Reserved</div>
+                </div>
+            </div><!--newalbum 닫기?-->
+        </div><!--wrap 닫기-->
+    </body>
+
+    <footer>
+
+        <div id="footer">
+            <img class="footer_img1" src="images/geniemusic.png" width="70px">
+            <ul class="footer2">
+                <li>괜찮다고 말해줘 - 장재인</li>
+                <li><div class="play_line"></div></li>
+                <li>재생 버튼을 클릭해보세요.</li>
+            </ul>
+            <ul class="footer3">
+                <li>00:00/04:26</li>
+            </ul>
+            <ul class="lyric">
+                <li>계절의 향기가 바람에 묻어</li>
+                <li>함께 듣던 노래를 흥얼이게 하네요</li>
+            </ul>
+            <div class="control_eara">
+            <ul>
+                <li><img src="images/botton1.png" width="25px"></li>
+                <li><img src="images/botton2.png" width="25px"></li>
+                <li><img src="images/botton3.png" width="25px"></li>
+                <li><img src="images/botton4.png" width="25px"></li>
+                <li><img src="images/botton5.png" width="25px"></li>
+                
+            </ul>
+            </div>
+            
+        </div>
+    </footer>
+</html>

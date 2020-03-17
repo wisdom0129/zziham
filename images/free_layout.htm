@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///Users/jihye/Documents/GitHub/DP2019/free_layout.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>free_layout</title>
+        
+        <style>
+            .clear { clear:both; height:0; overflow:hidden; }
+            .float_left{ float: left; }
+            .float_right{ float: right; }
+
+            input:-ms-input-placeholder {color:#21b5e6}
+            input::-webkit-input-placeholder {color:#21b5e6}
+            input::-moz-input-placeholder {color:#21b5e6}
+
+            .header li{
+                float: left;
+                list-style : none;
+                font-size: 13px;
+                margin:5px 15px 0px 0px;
+                color: gray;
+            }
+            .header li a{
+                text-decoration: none;
+                color: gray;
+            }
+            .header :hover{
+            color: #21b5e6;
+            }
+
+            .header{
+                margin: 0% 38%;
+                padding: 0px;
+            }
+            header>ul>li:nth-child(1){
+                font-weight:bold;
+            }
+            body>h1{
+                margin: 0px;
+                padding: 20px 20px 0px 150px;                 
+            }
+            .long_line{
+                border-bottom:solid 1px #21b5e6;
+                width:100%;
+                margin: 10px 0px; /*상하 좌우*/
+            }
+            .search{
+                height: 40px;
+                width: 400px;
+                border: 1px solid #21b5e6;
+                background:#ffffff;
+                display: inline-block;
+                margin: 30px 0px 0px 0px;
+            }
+            input{
+                border: 0px;
+                font-size: 16px;
+                padding: 10px;
+                width: 340px;
+                outline: none;
+                float: left;
+            }
+            .search img{
+                margin: 3px 0px 0px 0px;
+            }
+            body .nav li{
+                float:left;
+                list-style : none;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            body .nav {
+                margin:25px 0px 0px 100px;
+            }
+            .nav2 li{
+                float: right;
+                list-style: none;
+            }
+            .nav2{
+                font-size:13px;
+                color:gray;
+            }
+            .nav :hover{
+            color: #21b5e6;
+            }
+
+            .nav2 ul li{
+                margin: 0px 150px 0px 0px;
+            }
+            .newalbum{
+                float: left;
+                background-color:rgb(247, 247, 247);
+                padding: 5px 70px 10px 130px;
+                margin: 10px 0px;
+            }
+            .newalbum ul li{
+                float: left;
+                margin: 5px 10px 2px 0px;
+            }
+            .newalbum>ul>li{
+            list-style : none;
+            }
+            #footer{
+            position: fixed;
+            background-color: #21b5e6; /*임의색상*/
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6rem;
+            }
+            #footer img{
+            margin: 15px 0px 0px 0px;
+            }
+
+        </style>
+   </head>
+    <body>
+        <header>
+            <ul class="header">
+                <li><a href="file:///Users/jihye/Documents/GitHub/DP2019/index.html" target="_blank">LAST REPORT :</a></li>
+                <li><a href="file:///Users/jihye/Documents/GitHub/DP2019/layout1.html" target="_blank">Layout1</a></li>
+                <li><a href="file:///Users/jihye/Documents/GitHub/DP2019/layout2.html" target="_blank">Layout2</a></li>
+                <li><a href="file:///Users/jihye/Documents/GitHub/DP2019/layout3.html" target="_blank">Layout3</a></li>
+                <li><a href="file:///Users/jihye/Documents/GitHub/DP2019/free_layout.html" target="_blank">Genie</a></li>
+                <div class="clear"></div>
+            </ul>
+                <div class="long_line"></div>
+                    <!-- div(줄내림) span(줄내림x) 의미없이 구획나누기 좋음-->
+        </header>
+        <h1 class="float_left">
+            <img src="./free_layout_files/genie_logo.png" width="130px">
+        </h1>
+        <div class="search">
+            <input type="text" placeholder="당신의 하루를 빛나게 해줄 지니뮤직!">
+            <botton><img src="./free_layout_files/plus.png" width="25px"></botton>
+        </div>
+        <br>
+        <ul class="nav">
+            <li>최신음악</li>
+            <li>지니차트</li>
+            <li>장르음악</li>
+            <li>지니TV</li>
+            <li>추천</li>
+            <li>뮤직허그</li>
+        </ul>
+        <nav class="nav2">
+            <ul>
+                <li>로그인/회원가입</li>
+                <div class="clear"></div>
+            </ul>
+        </nav>
+        <section class="newalbum">
+            <ul>
+            <li>
+                <img src="./free_layout_files/album1.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album2.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album3.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album4.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album5.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album6.jpeg" width="200px" class="albumtitle">
+            </li>
+
+            <li>
+                <img src="./free_layout_files/album7.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album8.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album9.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album10.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album11.jpeg" width="200px" class="albumtitle">
+            </li>
+            <li>
+                <img src="./free_layout_files/album12.jpeg" width="200px" class="albumtitle">
+            </li>
+            </ul>
+        </section>
+
+    
+    <footer>
+        <div id="footer">
+            <img src="./free_layout_files/geniemusic.png" width="70px">
+            오늘 뭐 듣지?
+        </div>
+    </footer>
+</body></html>
